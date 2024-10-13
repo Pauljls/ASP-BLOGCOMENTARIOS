@@ -1,0 +1,36 @@
+﻿<div>
+    <h1>Usuarios</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                if (ViewBag.usuarios != null)
+                {
+                    foreach (var x in ViewBag.usuarios)
+                    {
+                        <tr>
+                            <td>@x.Id</td>
+                            <td>@x.Name</td>
+                            <td>@x.Apellido</td>
+                            <td>@x.Edad</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <div>
+                        <h2>No hay usuarios</h2>
+                    </div>    
+                }
+            }
+        </tbody>
+    </table>
+    <a asp-controller="Usuarios" asp-action="registrar" class="btn btn-primary my-4">Registrar</a>
+</div>

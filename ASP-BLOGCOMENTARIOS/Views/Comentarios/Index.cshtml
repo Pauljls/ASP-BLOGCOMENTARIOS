@@ -1,0 +1,16 @@
+﻿<h1>Comentarios</h1>
+@{
+    foreach (var comentario in ViewBag.comentarios)
+    {
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">@comentario.usuario</h5>
+                <h6 class="card-subtitle mb-2 text-body-secondary">@comentario.date</h6>
+                <p class="card-text">@comentario.contenido</p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+    }
+}
+<a asp-controller="Comentarios" asp-action="comentar" class="btn btn-primary my-4">Crear comentario</a>

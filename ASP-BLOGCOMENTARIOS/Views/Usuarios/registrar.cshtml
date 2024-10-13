@@ -1,0 +1,17 @@
+﻿@model UsuarioModel
+<form asp-action="registrar" >
+    <div class="mb-3">
+        <label asp-for=Name class="form-label">Nombre</label>
+        <input asp-for=Name type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+        <label asp-for=Apellido for="exampleInputPassword1" class="form-label">Password</label>
+        <input asp-for=Apellido type="text" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+        <label asp-for=Edad for="exampleInputPassword1" class="form-label">Password</label>
+        <input asp-for=Edad type="number" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

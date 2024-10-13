@@ -1,0 +1,16 @@
+﻿@model ComentarioViewModel
+<h1>Crear comentario</h1>
+<form asp-action="comentar"> 
+    <div class="my-3">
+        <label asp-for="IdUsuario">Escoja un usuario</label>
+        <select asp-for="IdUsuario" asp-items="ViewBag.usuarios">
+        </select>
+    </div>
+    <div class="my-3 flex-row">
+        <div><label asp-for="Comentario">Escriba un comentario</label></div>
+        <textarea asp-for="Comentario">
+
+        </textarea>
+    </div>
+    <input type="submit" value="Comentar" class="btn btn-primary"/>
+</form>
